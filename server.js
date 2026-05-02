@@ -144,7 +144,7 @@ app.delete('/espera/:id', async (req, res) => {
 app.get('/', (req, res) => res.json({ status: 'Dorian Barbershop API corriendo ✅' }));
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, async () => {
+app.listen(PORT, '0.0.0.0', async () => {
   await initDB();
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
